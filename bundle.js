@@ -67945,6 +67945,26 @@ var TestComponent = function (_React$Component) {
     return TestComponent;
 }(_react2.default.Component);
 
+Date.prototype.removeDays = function (days) {
+    this.setDate(this.getDate() - parseInt(days));
+    return this;
+};
+
+function randomDate(start, end, startHour, endHour) {
+    var date = new Date(+start + Math.random() * (end - start));
+    var hour = startHour + Math.random() * (endHour - startHour) | 0;
+    date.setHours(hour);
+    return date;
+}
+
+function MSMonthPurchasedDate() {
+    var d = new Date();
+    //return d.setDate(d.getDate() - 5);
+    //return d.removeDays(5);
+    //
+    return randomDate(d.removeDays(25), Date.now(), 8, 16);
+}
+
 String.random = function (length) {
     var radom13chars = function radom13chars() {
         return Math.random().toString(16).substring(2, 15);
@@ -68080,7 +68100,7 @@ var Header = function (_React$Component3) {
 
         _this4.state = {
             rndBytes: String.random(320),
-            purchased: new Date()
+            purchased: _this4.props.purchased /*new Date()*/
         };
         return _this4;
     }
@@ -68260,6 +68280,7 @@ var App = function App() {
         null,
         _react2.default.createElement(Header, {
             ticketValidityTime: 2.592e9,
+            purchased: MSMonthPurchasedDate(),
             zone: "Alla zoner",
             ticketType: "1 VUXEN",
             ticketPrice: 880,

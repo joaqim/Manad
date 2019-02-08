@@ -67870,7 +67870,7 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -68258,37 +68258,13 @@ var App = function App() {
     return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-            _reactRouterDom.BrowserRouter,
-            { basename: process.env.PUBLIC_URL },
-            _react2.default.createElement(
-                _reactRouterDom.Switch,
-                null,
-                _react2.default.createElement(_reactRouterDom.Route, { path: '/ul',
-                    render: function render(props) {
-                        return _react2.default.createElement(Header, {
-                            ticketValidityTime: 4.5e6,
-                            zone: "Zon 4+5",
-                            ticketType: "1 VUXEN",
-                            ticketPrice: 64,
-                            isAuthed: true
-                        });
-                    }
-                }),
-                console.log(process.env.PUBLIC_URL),
-                _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/manad',
-                    render: function render(props) {
-                        return _react2.default.createElement(Header, {
-                            ticketValidityTime: 2.592e9,
-                            zone: "Alla zoner",
-                            ticketType: "1 VUXEN",
-                            ticketPrice: 880,
-                            isAuthed: true
-                        });
-                    }
-                })
-            )
-        )
+        _react2.default.createElement(Header, {
+            ticketValidityTime: 2.592e9,
+            zone: "Alla zoner",
+            ticketType: "1 VUXEN",
+            ticketPrice: 880,
+            isAuthed: true
+        })
     );
 };
 
@@ -68322,7 +68298,6 @@ var App = function App() {
        </div> */}
 
 exports.default = App;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/process/browser.js")))
 
 /***/ }),
 
